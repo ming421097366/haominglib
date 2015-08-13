@@ -1,0 +1,2 @@
+# haominglib
+my javascript library 
