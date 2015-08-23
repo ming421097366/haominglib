@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript" src="Library.js"></script>
+	<script type="text/javascript">
+		var $ = window.library;
+		$.xssRequest('testjs.js',{
+			loadListener: function(){
+				console.log('load');
+			},
+			loadedListener: function() {
+				console.log('loaded');
+			},
+			interactiveListener: function(){
+				console.log('interact');
+			},
+			completeListener: function() {
+				console.log(this.responseJSON);
+			}
+		});
+
+	</script>
+</body>
+</html>
